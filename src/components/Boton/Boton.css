@@ -1,0 +1,13 @@
+.boton{
+    background-color: #6278f7;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 18px 32px;
+    border: none;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.boton:hover{
+    color: #95ffd4;
+}
