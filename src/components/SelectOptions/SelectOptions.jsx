@@ -1,25 +1,16 @@
 import React from 'react'
 import './SelectOptions.css'
 
-function SelectOptions() {
-
-    const options = [
-        'Programacion',
-        'Front End',
-        'Data Science',
-        'Devops',
-        'UX y Diseño',
-        'Movil',
-        'Innovacion y Gestion'
-    ]
+function SelectOptions(props) {
 
     return (
         <div className='option-list'>
             <label htmlFor="">Equipos</label>
-            <select>
+            <select value={props.valor} onChange={(e)=> props.setEquipo(e.target.value)}>
+                <option value="" disabled defaultValue="" hidden>Seleccionar equipo</option>
                 {
-                    options.map((onlyOption, index)=>{
-                        return <option key={index}>{onlyOption}</option>
+                    props.equipos.map((equipo, index)=>{
+                        return <option key={index} value={equipo}>{equipo}</option>
                     })
                 }
             </select>
